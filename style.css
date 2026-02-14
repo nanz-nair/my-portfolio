@@ -207,6 +207,10 @@ body {
   height: 320px;
 }
 
+.project-card__image--carepatron {
+  background: linear-gradient(135deg, #2563eb 0%, #60a5fa 100%);
+}
+
 .project-card__image--kami {
   background: linear-gradient(135deg, #6b4ce0 0%, #9b7ff0 100%);
 }
