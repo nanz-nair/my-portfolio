@@ -120,10 +120,30 @@ body {
 
 .hero-headline {
   font-family: var(--font-heading);
-  font-size: clamp(2.8rem, 6vw, 4.5rem);
+  font-size: clamp(2.2rem, 4vw, 3.2rem);
+  font-weight: 700;
   line-height: 1.1;
   letter-spacing: -0.02em;
   margin-bottom: 24px;
+  white-space: nowrap;
+}
+
+.hero-design {
+  transition: all 0.3s;
+}
+
+.hero-design:hover {
+  background: linear-gradient(90deg, var(--color-orange), var(--color-purple), var(--color-orange));
+  background-size: 200% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradient-shift 2s linear infinite;
+}
+
+@keyframes gradient-shift {
+  0% { background-position: 0% 50%; }
+  100% { background-position: 200% 50%; }
 }
 
 .hero-subtitle {
