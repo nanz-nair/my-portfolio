@@ -99,6 +99,28 @@ body {
   font-size: 0.9rem;
 }
 
+.nav-logo-name::after {
+  content: attr(data-hover);
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+
+.nav-logo-name {
+  position: relative;
+}
+
+.nav-logo:hover .nav-logo-name {
+  color: transparent;
+}
+
+.nav-logo:hover .nav-logo-name::after {
+  opacity: 1;
+  color: var(--color-text);
+}
+
 .nav-logo-role {
   font-size: 0.75rem;
   color: var(--color-text-muted);
