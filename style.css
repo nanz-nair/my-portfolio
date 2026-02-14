@@ -151,7 +151,7 @@ body {
 
 .hero-headline {
   font-family: var(--font-heading);
-  font-size: clamp(2.2rem, 4vw, 3.2rem);
+  font-size: clamp(1.4rem, 4vw, 3.2rem);
   font-weight: 700;
   line-height: 1.1;
   letter-spacing: -0.02em;
@@ -590,7 +590,7 @@ body {
   }
 
   .hero-meta {
-    flex-direction: column;
+    flex-direction: column-reverse;
     align-items: flex-start;
     gap: 12px;
   }
