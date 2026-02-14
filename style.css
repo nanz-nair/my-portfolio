@@ -60,20 +60,17 @@ body {
   gap: 12px;
   text-decoration: none;
   color: var(--color-text);
+  background: #f0efed;
+  border-radius: 100px;
+  padding: 6px 20px 6px 6px;
+  border-left: 3px solid var(--color-orange);
 }
 
 .nav-avatar {
-  width: 36px;
-  height: 36px;
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
-  background: var(--color-text);
-  color: #fff;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 0.7rem;
-  font-weight: 700;
-  letter-spacing: 0.02em;
+  object-fit: cover;
   flex-shrink: 0;
 }
 
