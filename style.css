@@ -20,6 +20,15 @@
 
 html {
   scroll-behavior: smooth;
+  cursor: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"><circle cx="10" cy="10" r="8" fill="%23e87b35"/></svg>') 10 10, auto;
+}
+
+a, button, .btn, .project-card, .nav-logo {
+  cursor: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"><circle cx="10" cy="10" r="8" fill="%232a9d8f"/></svg>') 10 10, pointer;
+}
+
+a:active, button:active, .btn:active, .project-card:active, .nav-logo:active {
+  cursor: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"><circle cx="10" cy="10" r="8" fill="%232563eb"/></svg>') 10 10, pointer;
 }
 
 body {
