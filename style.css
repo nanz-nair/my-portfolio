@@ -18,6 +18,16 @@
   --font-serif: 'DM Serif Display', Georgia, serif;
 }
 
+.dot-grid {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+}
+
 html {
   scroll-behavior: smooth;
   cursor: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"><circle cx="10" cy="10" r="8" fill="%23e87b35"/></svg>') 10 10, auto;
@@ -34,8 +44,6 @@ a:active, button:active, .btn:active, .project-card:active, .nav-logo:active {
 body {
   font-family: var(--font-sans);
   background: var(--color-bg);
-  background-image: radial-gradient(circle, #d0d0d0 1px, transparent 1px);
-  background-size: 24px 24px;
   color: var(--color-text);
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
