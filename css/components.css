@@ -168,7 +168,7 @@ body::after {
 
 .hero-headline {
   font-family: var(--font-display);
-  font-size: var(--text-display);
+  font-size: var(--text-heading);
   font-weight: var(--weight-heavy);
   line-height: var(--leading-tight);
   letter-spacing: var(--tracking-tight);
@@ -471,6 +471,7 @@ body::after {
 .type-row__meta strong { color: var(--color-text); font-weight: var(--weight-heavy); font-size: var(--text-secondary); }
 .type-row__sample { line-height: var(--leading-snug); min-width: 0; overflow-wrap: anywhere; }
 .type-display { font-family: var(--font-display); font-size: var(--text-display); font-weight: var(--weight-heavy); line-height: var(--leading-tight); letter-spacing: var(--tracking-tight); }
+.type-heading { font-family: var(--font-display); font-size: var(--text-heading); font-weight: var(--weight-heavy); }
 .type-title { font-family: var(--font-display); font-size: var(--text-title); font-weight: var(--weight-heavy); }
 .type-body { font-size: var(--text-body); font-weight: var(--weight-medium); }
 .type-secondary { font-size: var(--text-secondary); font-weight: var(--weight-medium); }
@@ -532,7 +533,7 @@ body::after {
    Breakpoints are listed in tokens.css; keep these literals in sync. */
 @media (max-width: 768px) {
   .hero { padding: var(--space-64) 0 var(--space-48); }
-  .hero-headline, .page-title, .type-display { font-size: var(--text-display-sm); }
+  .page-title, .type-display { font-size: var(--text-display-sm); }
   .type-row { grid-template-columns: 1fr; gap: var(--space-8); }
   .project-card--large { flex-direction: column; }
   .project-card--large .project-card__info { flex: none; }
