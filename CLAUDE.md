@@ -26,6 +26,7 @@ follows the cursor); don't add more without asking.
 
 - Never hardcode colours, spacing or typography values: use `var(--…)` from
   `css/tokens.css`. Propose a new token rather than inlining a value.
+- Orange is only for large text (the 24px Heavy wordmark); small text stays Black/Neutral.
 - Components use role tokens (`--color-text`, `--color-surface`, `--color-accent`…),
   not raw palette tokens. Exception: palette swatches in the style guide.
 - Reuse existing components before writing new CSS. Add any new component (and

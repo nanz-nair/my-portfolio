@@ -71,10 +71,11 @@ body::after {
 }
 
 /* ===== Navigation =====
-   .nav > .nav-inner > [.nav-logo, .nav-links > (links, .theme-toggle)] */
+   .nav > .nav-inner > [.nav-logo (wordmark), .nav-links > (links, .theme-toggle)] */
 .nav {
   position: sticky;
   top: var(--frame);
+  padding-top: var(--space-24);
   background: var(--color-bg);
   z-index: var(--z-nav);
 }
@@ -89,50 +90,17 @@ body::after {
   height: var(--nav-height);
 }
 
-/* Name pill: avatar + name (swaps to the full name on hover) + role */
+/* Wordmark: "Nanz." in Orange. Large text (24px Heavy), so Orange passes
+   contrast here (3.9:1 light, 4.2:1 dark); not for smaller text. */
 .nav-logo {
-  display: flex;
-  align-items: center;
-  gap: var(--space-12);
-  text-decoration: none;
-  color: var(--color-text);
-  background: var(--color-surface);
-  border-radius: var(--radius-pill);
-  padding: var(--space-6) var(--space-20) var(--space-6) var(--space-6);
-  transition: box-shadow 0.2s;
-}
-
-.nav-logo:hover { box-shadow: var(--shadow-sm); }
-
-.nav-avatar {
-  width: var(--avatar);
-  height: var(--avatar);
-  border-radius: var(--radius-round);
-  object-fit: cover;
-  flex-shrink: 0;
-}
-
-.nav-logo-text { display: flex; flex-direction: column; line-height: var(--leading-snug); white-space: nowrap; }
-
-.nav-logo-name {
+  font-family: var(--font-display);
+  font-size: var(--text-heading);
   font-weight: var(--weight-heavy);
-  font-size: var(--text-secondary);
-  position: relative;
+  letter-spacing: var(--tracking-tight);
+  line-height: var(--leading-tight);
+  color: var(--color-brand);
+  text-decoration: none;
 }
-
-.nav-logo-name::after {
-  content: attr(data-hover);
-  position: absolute;
-  left: 0;
-  top: 0;
-  opacity: 0;
-  transition: opacity 0.2s;
-}
-
-.nav-logo:hover .nav-logo-name { color: transparent; }
-.nav-logo:hover .nav-logo-name::after { opacity: 1; color: var(--color-text); }
-
-.nav-logo-role { font-size: var(--text-small); font-weight: var(--weight-medium); color: var(--color-text); }
 
 .nav-links { display: flex; align-items: center; gap: var(--space-32); }
 
@@ -549,7 +517,7 @@ body::after {
 
 @media (max-width: 480px) {
   .nav-inner { height: var(--nav-height-sm); }
-  .nav-logo { gap: var(--space-8); padding-right: var(--space-12); }
+  .nav { padding-top: var(--space-12); }
   .nav-links { gap: var(--space-16); }
   .hero-meta { flex-direction: column-reverse; align-items: flex-start; gap: var(--space-12); }
   .project-card__info { padding: var(--space-20); }
