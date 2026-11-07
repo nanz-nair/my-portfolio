@@ -27,8 +27,6 @@
   /* Mixed from the palette for interface surfaces */
   --cream-50: #faf6f0;       /* neutral 40% on white: light page and cards */
   --cream-200: #dacfbf;      /* black 12% on neutral: light border */
-  --cream-300: #cec2b2;      /* black 18% on neutral: light dot grid */
-  --brown-800: #574636;      /* neutral 24% on black: dark dot grid */
   --brown-850: #4b3a29;      /* neutral 18% on black: dark border */
   --brown-900: #32200f;      /* neutral 6% on black: dark cards */
   --shadow-brown: rgba(38, 19, 2, 0.08);
@@ -121,7 +119,6 @@
   --measure-lede: 720px;        /* style guide intro */
   --nav-height: 64px;
   --nav-height-sm: 56px;
-  --dot-spacing: 24px;
   --avatar: 40px;
   --toggle: 36px;
   --icon: 18px;
@@ -152,7 +149,6 @@
   --color-text: var(--black);
   --color-tag: var(--neutral);
   --color-border: var(--cream-200);
-  --color-dot: var(--cream-300);
   --shadow-sm: 0 4px 16px var(--shadow-brown);
   --shadow-md: 0 8px 32px var(--shadow-brown);
 }
@@ -163,7 +159,6 @@
   --color-text: var(--neutral);
   --color-tag: var(--black);
   --color-border: var(--brown-850);
-  --color-dot: var(--brown-800);
   --shadow-sm: 0 4px 16px var(--shadow-black);
   --shadow-md: 0 8px 32px var(--shadow-black);
 }

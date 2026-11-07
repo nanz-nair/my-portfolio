@@ -29,8 +29,6 @@ body {
   font-size: var(--text-body);
   font-weight: var(--weight-medium);
   background: var(--color-bg);
-  background-image: radial-gradient(circle, var(--color-dot) 1px, transparent 1px);
-  background-size: var(--dot-spacing) var(--dot-spacing);
   color: var(--color-text);
   line-height: var(--leading-normal);
   -webkit-font-smoothing: antialiased;
