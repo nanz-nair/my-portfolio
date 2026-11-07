@@ -245,6 +245,23 @@ body::after {
   font-weight: var(--weight-medium);
 }
 
+/* ===== Project list =====
+   Projects by date, newest first: a rule, then date, title and description.
+   <ol class="project-list"> > <li class="project-list__item"> */
+.project-list { list-style: none; border-bottom: 1px solid var(--color-border); }
+.project-list__item { padding: var(--space-32) 0; border-top: 1px solid var(--color-border); }
+.project-list__date { font-size: var(--text-secondary); font-weight: var(--weight-medium); margin-bottom: var(--space-12); }
+
+.project-list__title {
+  font-family: var(--font-display);
+  font-size: var(--text-title);
+  font-weight: var(--weight-heavy);
+  line-height: var(--leading-snug);
+  margin-bottom: var(--space-8);
+}
+
+.project-list__desc { font-size: var(--text-body); line-height: var(--leading-normal); max-width: var(--measure); }
+
 /* ===== Tag ===== */
 .tag {
   display: inline-block;
