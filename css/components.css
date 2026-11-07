@@ -14,10 +14,11 @@
 
 /* ===== Frame =====
    A fixed frame around the browser window; the page scrolls beneath it.
-   A border can't round only its inner edge, so this is a rounded box inset by
-   the frame width, with a solid shadow spread out past the window edges.
-   The spread is wide enough that its own rounded corners fall off-screen,
-   leaving the outer corners square. */
+   Square outer corners, rounded inner corners, filled with a gradient whose
+   glow follows the cursor (frame.js sets --pointer-x / --pointer-y).
+
+   Fallback (no mask-composite support): a solid frame drawn as a rounded box
+   inset by the frame width, with a shadow spread past the window edges. */
 body::after {
   content: '';
   position: fixed;
@@ -26,6 +27,47 @@ body::after {
   box-shadow: 0 0 0 calc(var(--frame) * 2 + var(--frame-radius)) var(--color-accent);
   pointer-events: none;
   z-index: var(--z-frame);
+}
+
+/* Cursor position, registered so it can ease smoothly. Defaults to the centre. */
+@property --pointer-x { syntax: '<length-percentage>'; inherits: true; initial-value: 50%; }
+@property --pointer-y { syntax: '<length-percentage>'; inherits: true; initial-value: 50%; }
+
+/* Gradient frame: a full-window gradient with the inner rounded rectangle cut
+   out by the mask. Top layer = whole window; the layers below it add up to
+   the rounded rectangle (two crossing bands + four corner circles), which is
+   subtracted. */
+@supports (mask-composite: subtract) {
+  html { transition: --pointer-x var(--frame-follow) ease-out, --pointer-y var(--frame-follow) ease-out; }
+
+  body::after {
+    --k: calc(var(--frame) + var(--frame-radius));  /* corner circle centre offset */
+    --corner: var(--mask-solid) calc(var(--frame-radius) - var(--mask-feather)), transparent var(--frame-radius);
+    inset: 0;
+    border-radius: 0;
+    box-shadow: none;
+    background: radial-gradient(circle at var(--pointer-x) var(--pointer-y), var(--color-frame-glow), var(--color-accent) var(--frame-glow));
+    mask-image:
+      linear-gradient(var(--mask-solid) 0 0),
+      linear-gradient(var(--mask-solid) 0 0),
+      linear-gradient(var(--mask-solid) 0 0),
+      radial-gradient(circle at var(--k) var(--k), var(--corner)),
+      radial-gradient(circle at calc(100% - var(--k)) var(--k), var(--corner)),
+      radial-gradient(circle at var(--k) calc(100% - var(--k)), var(--corner)),
+      radial-gradient(circle at calc(100% - var(--k)) calc(100% - var(--k)), var(--corner));
+    mask-size:
+      100% 100%,
+      calc(100% - 2 * var(--k)) calc(100% - 2 * var(--frame)),
+      calc(100% - 2 * var(--frame)) calc(100% - 2 * var(--k)),
+      100% 100%, 100% 100%, 100% 100%, 100% 100%;
+    mask-position: center;
+    mask-repeat: no-repeat;
+    mask-composite: subtract, add, add, add, add, add, add;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { transition: none; }
 }
 
 /* ===== Navigation =====

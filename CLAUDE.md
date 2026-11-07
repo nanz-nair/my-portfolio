@@ -4,7 +4,8 @@ Personal portfolio published with GitHub Pages from `main` (custom domain in `CN
 
 **No build step.** Plain HTML + CSS; the files in the repo are exactly what visitors
 download. No npm, package.json, bundlers, Tailwind or third-party design systems.
-The only JavaScript is `theme.js` (light/dark toggle); don't add more without asking.
+The only JavaScript is `theme.js` (light/dark toggle) and `frame.js` (frame glow
+follows the cursor); don't add more without asking.
 
 ## File map
 
@@ -16,6 +17,7 @@ The only JavaScript is `theme.js` (light/dark toggle); don't add more without as
 - `css/layout.css`: page shell, `.container`, `.section`
 - `css/components.css`: one commented section per component; responsive rules last
 - `theme.js`: sets `data-theme` on `<html>` before paint; wires the toggle button
+- `frame.js`: passes the cursor position to CSS for the gradient frame
 - `scripts/check-tokens.sh`: fails on raw colours / font names outside tokens.css
 - `.claude/settings.json`: PostToolUse hook that runs the check after every edit
 - `images/`: photos
@@ -38,7 +40,7 @@ The only JavaScript is `theme.js` (light/dark toggle); don't add more without as
 - No files or folders starting with `_`, and no `.nojekyll` (GitHub Pages/Jekyll).
 - Custom properties don't work in media queries; breakpoints are literal
   (768px, 480px), listed in tokens.css. Keep them in sync.
-- Every page needs, in `<head>`, in this order: `theme.js`, then the four
+- Every page needs, in `<head>`, in this order: `theme.js`, `frame.js` (defer), the four
   stylesheets `css/tokens.css`, `css/base.css`, `css/layout.css`, `css/components.css`
   as `<link>` tags (no `@import`). No Google Fonts: Avenir is a system font.
 - The Content-Security-Policy meta tag blocks inline styles and inline scripts.

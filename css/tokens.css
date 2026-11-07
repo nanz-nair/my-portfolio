@@ -34,6 +34,7 @@
 
   /* ---- Colour roles that don't change with the theme ---- */
   --color-accent: var(--orange);           /* frame, footer, link-hover highlight; never text */
+  --color-frame-glow: var(--olive);        /* frame gradient colour nearest the cursor */
   --color-on-accent: var(--neutral);       /* text on Orange: 3.5:1 */
   --color-inverse: var(--black);           /* footer link hover highlight */
   --color-on-inverse: var(--neutral);
@@ -112,6 +113,10 @@
   /* ---- Frame ---- */
   --frame: 9px;
   --frame-radius: 24px;         /* inner corners only */
+  --frame-glow: 50vmax;         /* how far the cursor glow spreads along the frame */
+  --frame-follow: 0.2s;         /* how quickly the glow catches up with the cursor */
+  --mask-solid: #000;           /* opaque fill for mask layers (only alpha matters) */
+  --mask-feather: 0.75px;       /* softens curved mask edges */
 
   /* ---- Sizes ---- */
   --content-width: 1080px;
