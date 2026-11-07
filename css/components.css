@@ -90,7 +90,7 @@ body::after {
   height: var(--nav-height);
 }
 
-/* Wordmark: "Nanz." in Orange. Large text (24px Heavy), so Orange passes
+/* Wordmark: "nanz" in Orange. Large text (24px Heavy), so Orange passes
    contrast here (3.9:1 light, 4.2:1 dark); not for smaller text. */
 .nav-logo {
   font-family: var(--font-display);
