@@ -90,7 +90,7 @@ body::after {
   height: var(--nav-height);
 }
 
-/* Wordmark: "nanz" in Orange. Large text (24px Heavy), so Orange passes
+/* Wordmark: an Orange circle and "nanz" in Orange. Large text (24px Heavy), so Orange passes
    contrast here (3.9:1 light, 4.2:1 dark); not for smaller text. */
 .nav-logo {
   font-family: var(--font-display);
@@ -100,6 +100,19 @@ body::after {
   line-height: var(--leading-tight);
   color: var(--color-brand);
   text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-12);
+}
+
+/* The circle beside the name (decorative, so drawn in CSS) */
+.nav-logo::before {
+  content: '';
+  width: var(--avatar);
+  height: var(--avatar);
+  border-radius: var(--radius-round);
+  background: var(--color-brand);
+  flex-shrink: 0;
 }
 
 .nav-links { display: flex; align-items: center; gap: var(--space-32); }
