@@ -1,0 +1,17 @@
+{
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "Edit|Write|MultiEdit",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "cd \"$CLAUDE_PROJECT_DIR\" && sh scripts/check-tokens.sh >&2 || exit 2",
+            "timeout": 30,
+            "statusMessage": "Checking design tokens…"
+          }
+        ]
+      }
+    ]
+  }
+}
