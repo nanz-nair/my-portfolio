@@ -80,9 +80,9 @@ body::after {
 }
 
 .nav-inner {
-  max-width: var(--content-width);
+  max-width: var(--content-max);
   margin: 0 auto;
-  padding: 0 var(--space-24);
+  padding: 0 var(--gutter);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -112,7 +112,7 @@ body::after {
   flex-shrink: 0;
 }
 
-.nav-logo-text { display: flex; flex-direction: column; line-height: var(--leading-snug); }
+.nav-logo-text { display: flex; flex-direction: column; line-height: var(--leading-snug); white-space: nowrap; }
 
 .nav-logo-name {
   font-weight: var(--weight-heavy);
@@ -201,6 +201,7 @@ body::after {
 
 .hero-meta { display: flex; align-items: center; gap: var(--space-24); font-size: var(--text-secondary); font-weight: var(--weight-medium); }
 
+.hero-link { white-space: nowrap; }
 .hero-role { color: var(--color-text); }
 .hero-role strong { color: var(--color-text); font-weight: var(--weight-heavy); }
 
@@ -548,7 +549,8 @@ body::after {
 
 @media (max-width: 480px) {
   .nav-inner { height: var(--nav-height-sm); }
-  .nav-links { gap: var(--space-20); }
+  .nav-logo { gap: var(--space-8); padding-right: var(--space-12); }
+  .nav-links { gap: var(--space-16); }
   .hero-meta { flex-direction: column-reverse; align-items: flex-start; gap: var(--space-12); }
   .project-card__info { padding: var(--space-20); }
   .footer-links { gap: var(--space-20); }

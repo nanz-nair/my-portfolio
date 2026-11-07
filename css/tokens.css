@@ -121,6 +121,8 @@
 
   /* ---- Sizes ---- */
   --content-width: 1080px;
+  --gutter: calc(var(--frame) + var(--space-24));  /* side padding, measured from inside the frame */
+  --content-max: calc(var(--content-width) + 2 * var(--frame));  /* keeps the text column 1032px wide */
   --measure: 560px;             /* hero subtitle, card descriptions */
   --measure-wide: 640px;        /* About bio */
   --measure-lede: 720px;        /* style guide intro */

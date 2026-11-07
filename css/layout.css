@@ -10,7 +10,7 @@ body {
 }
 
 /* Centred content column with side gutters */
-.container { max-width: var(--content-width); margin: 0 auto; padding: 0 var(--space-24); }
+.container { max-width: var(--content-max); margin: 0 auto; padding: 0 var(--gutter); }
 
 /* Vertical rhythm for page sections */
 .section { padding: var(--space-64) 0; }
