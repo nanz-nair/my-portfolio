@@ -67,8 +67,9 @@
   --text-secondary: 0.9375rem; /* 15px  Medium: secondary */
   --text-body: 1.125rem;       /* 18px  Medium: body copy */
   --text-title: 1.3125rem;     /* 21px  Heavy: title */
+  --text-heading: 1.5rem;      /* 24px  Heavy: hero headline */
   --text-display-sm: 2.25rem;  /* 36px  Heavy: display on tablet and below */
-  --text-display: 3rem;        /* 48px  Heavy: hero and page titles */
+  --text-display: 3rem;        /* 48px  Heavy: page titles */
 
   --leading-tight: 1.1;
   --leading-snug: 1.3;
