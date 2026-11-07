@@ -113,7 +113,7 @@
 
   /* ---- Frame ---- */
   --frame: 9px;
-  --frame-radius: 24px;         /* inner corners only */
+  --frame-radius: 12px;         /* inner corners only: Chrome's macOS window corner (~21px) minus --frame, so the band stays even */
   --frame-glow: 50vmax;         /* how far the cursor glow spreads along the frame */
   --frame-follow: 0.2s;         /* how quickly the glow catches up with the cursor */
   --mask-solid: #000;           /* opaque fill for mask layers (only alpha matters) */
