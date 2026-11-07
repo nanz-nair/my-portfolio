@@ -3,12 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; base-uri 'none'; form-action 'none'; upgrade-insecure-requests">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; font-src 'self'; img-src 'self' data:; base-uri 'none'; form-action 'none'">
   <title>Nanz Nair — Lead Product Designer</title>
+  <script src="theme.js"></script>
   <link rel="stylesheet" href="style.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&family=DM+Serif+Display&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="icon" type="image/png" href="images/nanz-photo.png">
 </head>
 <body>
@@ -16,7 +14,7 @@
   <!-- Navigation -->
   <nav class="nav">
     <div class="nav-inner">
-      <a href="#" class="nav-logo">
+      <a href="index.html" class="nav-logo">
         <img src="images/nanz-photo.png" alt="Nanz Nair" class="nav-avatar">
         <span class="nav-logo-text">
           <span class="nav-logo-name" data-hover="Nandini Nair">Nanz Nair</span>
@@ -24,8 +22,12 @@
         </span>
       </a>
       <div class="nav-links">
-        <a href="#work">Work</a>
-        <a href="#about">About</a>
+        <a href="index.html#work">Work</a>
+        <a href="about.html">About</a>
+        <button type="button" class="theme-toggle" aria-label="Switch to dark mode" aria-pressed="false">
+          <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5Z"/></svg>
+          <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+        </button>
       </div>
     </div>
   </nav>
@@ -126,67 +128,15 @@
     </div>
   </section>
 
-  <!-- Let's Work Together / About -->
-  <section id="about" class="section about">
-    <div class="container">
-      <div class="about-inner">
-        <p class="about-label">Let&rsquo;s work together</p>
-        <p class="about-bio">I&rsquo;m Nanz / Nandini Nair &mdash; a Senior Product Designer with over a decade of experience shaping digital products that help people work, learn, and connect. My journey began in brand and marketing design, evolved through UX/UI, and matured into end-to-end product design, giving me a holistic understanding of how strategy, craft, and systems thinking come together to build meaningful, scalable products.</p>
-        <p class="about-bio">I specialize in designing accessible productivity and community tools, with a focus on the EdTech and AI sectors. At Kami, I&rsquo;ve helped create experiences used by millions of learners and educators worldwide, while also engaging with the global EdTech community through ISTE (US), BETT (UK), EduTECH Asia &amp; Australia, and Stanford&rsquo;s EdTech Remix. My work centers on advancing design maturity, building systems that enable growth, and fostering cross-functional collaboration where creativity meets data-driven understanding.</p>
-        <p class="about-bio">Previously, I was a Senior Product Designer at Laurel (Los Angeles), leading the design of internal tools and a scalable design system for a machine-learning-driven platform. I&rsquo;m also a Fulbright Science &amp; Innovation Grantee and hold a Master&rsquo;s in Design from Carnegie Mellon University, where I deepened my expertise in research methods, HCI, and systems thinking. I believe design is at its best when it brings clarity and humanity to complexity &mdash; crafting experiences that are not just usable, but truly empowering.</p>
-        <a href="https://www.linkedin.com/in/nanznair/" target="_blank" rel="noopener" class="btn btn--outline">Resume &#8599;</a>
-      </div>
-      <div class="about-image">
-        <img src="images/nanz-photo.png" alt="Nanz Nair">
-      </div>
-    </div>
-  </section>
-
-  <!-- Testimonials -->
-  <section class="section testimonials">
-    <div class="container">
-      <h2 class="section-label">What People Say</h2>
-      <div class="testimonial-grid">
-        <blockquote class="testimonial">
-          <span class="testimonial-quote testimonial-quote--purple">&ldquo;</span>
-          <p>Nanz has an incredible ability to translate complex requirements into intuitive, elegant designs. Their work on our product elevated the entire user experience.</p>
-          <cite>
-            <strong>Sarah Chen</strong>
-            <span>Engineering Lead, Kami</span>
-          </cite>
-        </blockquote>
-        <blockquote class="testimonial">
-          <span class="testimonial-quote testimonial-quote--orange">&ldquo;</span>
-          <p>A rare designer who truly understands both the user and the business. Nanz consistently delivered work that exceeded expectations and moved metrics.</p>
-          <cite>
-            <strong>James Park</strong>
-            <span>Product Manager, Laurel</span>
-          </cite>
-        </blockquote>
-        <blockquote class="testimonial">
-          <span class="testimonial-quote testimonial-quote--purple">&ldquo;</span>
-          <p>Working with Nanz was a game-changer for our team. They brought clarity to ambiguous problems and built a design system that scaled beautifully.</p>
-          <cite>
-            <strong>Maria Lopez</strong>
-            <span>CTO, Cogo</span>
-          </cite>
-        </blockquote>
-        <blockquote class="testimonial">
-          <span class="testimonial-quote testimonial-quote--orange">&ldquo;</span>
-          <p>Nanz combines strategic thinking with pixel-perfect execution. They&rsquo;re the kind of designer who makes everyone around them better.</p>
-          <cite>
-            <strong>David Kim</strong>
-            <span>VP of Product, Carepatron</span>
-          </cite>
-        </blockquote>
-      </div>
-    </div>
-  </section>
-
   <!-- Footer -->
   <footer class="footer">
     <div class="container">
       <p class="footer-tagline">~ Scaling your impact with design ~</p>
+      <nav class="footer-links" aria-label="Footer">
+        <a href="design-system.html">Design System</a>
+        <a href="about.html">About</a>
+        <a href="index.html#work">Work</a>
+      </nav>
     </div>
   </footer>
 

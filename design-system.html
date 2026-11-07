@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; font-src 'self'; img-src 'self' data:; base-uri 'none'; form-action 'none'">
+  <title>Design System — Nanz Nair</title>
+  <script src="theme.js"></script>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/png" href="images/nanz-photo.png">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">
+        <img src="images/nanz-photo.png" alt="Nanz Nair" class="nav-avatar">
+        <span class="nav-logo-text">
+          <span class="nav-logo-name" data-hover="Nandini Nair">Nanz Nair</span>
+          <span class="nav-logo-role">Product Designer</span>
+        </span>
+      </a>
+      <div class="nav-links">
+        <a href="index.html#work">Work</a>
+        <a href="about.html">About</a>
+        <button type="button" class="theme-toggle" aria-label="Switch to dark mode" aria-pressed="false">
+          <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5Z"/></svg>
+          <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <main class="ds">
+    <header class="section ds-intro">
+      <div class="container">
+        <h1 class="page-title">Design System</h1>
+        <p class="hero-subtitle">The tokens and components behind this site: a six-colour earth palette in light and dark modes, and one typeface, Avenir, on a scale built in steps of 3px.</p>
+      </div>
+    </header>
+
+    <!-- Colour -->
+    <section class="section ds-section">
+      <div class="container">
+        <h2 class="section-label">Colour</h2>
+        <div class="swatch-grid">
+          <div class="swatch"><div class="swatch__chip swatch__chip--orange"></div><p class="swatch__name">Orange</p><p class="swatch__role">Frame, footer, link hover</p><code>--orange &middot; #E53A04</code></div>
+          <div class="swatch"><div class="swatch__chip swatch__chip--mahogany"></div><p class="swatch__name">Mahogany</p><p class="swatch__role">Imagery</p><code>--mahogany &middot; #561305</code></div>
+          <div class="swatch"><div class="swatch__chip swatch__chip--forest"></div><p class="swatch__name">Forest</p><p class="swatch__role">Imagery</p><code>--forest &middot; #1F3300</code></div>
+          <div class="swatch"><div class="swatch__chip swatch__chip--olive"></div><p class="swatch__name">Olive</p><p class="swatch__role">Hover accent, imagery</p><code>--olive &middot; #676F0F</code></div>
+          <div class="swatch"><div class="swatch__chip swatch__chip--black"></div><p class="swatch__name">Black</p><p class="swatch__role">Text; background in dark mode</p><code>--black &middot; #261302</code></div>
+          <div class="swatch"><div class="swatch__chip swatch__chip--neutral"></div><p class="swatch__name">Neutral</p><p class="swatch__role">Tags; text in dark mode</p><code>--neutral &middot; #F3E9D9</code></div>
+        </div>
+        <div class="type-specimen ds-note">
+          <p class="type-specimen__meta">Contrast</p>
+          <p class="type-body">Light mode: Black text on a #FAF6F0 page (16.6:1). Dark mode: Neutral text on Black (14.9:1). The footer is Neutral on Orange (3.5:1). Orange is never a text colour; hovered links get an Orange highlight with Neutral text (3.5:1).</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Themes -->
+    <section class="section ds-section">
+      <div class="container">
+        <h2 class="section-label">Light and dark mode</h2>
+        <p class="type-body ds-lede">The moon and sun button in the navigation switches themes. The site follows the system setting until a visitor picks one, then remembers it. Both themes use the same palette; only the roles below change. Orange stays the same in both: frame, footer and link hover.</p>
+        <div class="theme-grid">
+        <div class="theme-preview" data-theme="light">
+          <p class="type-title">Light</p>
+          <p class="type-body">Body copy with <a href="#">a text link</a> in it.</p>
+          <div class="theme-preview__demo">
+            <span class="tag">Tag</span>
+            <a href="#" class="btn btn--outline">Button</a>
+          </div>
+          <ul class="token-list">
+            <li class="token"><span class="token__chip token__chip--bg"></span>Background<code>--bg &middot; #FAF6F0</code></li>
+            <li class="token"><span class="token__chip token__chip--card"></span>Card<code>--card &middot; #FAF6F0</code></li>
+            <li class="token"><span class="token__chip token__chip--text"></span>Text<code>--text &middot; Black</code></li>
+            <li class="token"><span class="token__chip token__chip--tag"></span>Tag<code>--tag-bg &middot; Neutral</code></li>
+            <li class="token"><span class="token__chip token__chip--border"></span>Border<code>--border &middot; #DACFBF</code></li>
+          </ul>
+        </div>
+        <div class="theme-preview" data-theme="dark">
+          <p class="type-title">Dark</p>
+          <p class="type-body">Body copy with <a href="#">a text link</a> in it.</p>
+          <div class="theme-preview__demo">
+            <span class="tag">Tag</span>
+            <a href="#" class="btn btn--outline">Button</a>
+          </div>
+          <ul class="token-list">
+            <li class="token"><span class="token__chip token__chip--bg"></span>Background<code>--bg &middot; Black</code></li>
+            <li class="token"><span class="token__chip token__chip--card"></span>Card<code>--card &middot; #32200F</code></li>
+            <li class="token"><span class="token__chip token__chip--text"></span>Text<code>--text &middot; Neutral</code></li>
+            <li class="token"><span class="token__chip token__chip--tag"></span>Tag<code>--tag-bg &middot; Black</code></li>
+            <li class="token"><span class="token__chip token__chip--border"></span>Border<code>--border &middot; #4B3A29</code></li>
+          </ul>
+        </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Typography -->
+    <section class="section ds-section">
+      <div class="container">
+        <h2 class="section-label">Typography</h2>
+        <div class="type-specimen">
+          <p class="type-specimen__meta"><code>--font</code> Avenir, falling back to Helvetica Neue</p>
+          <p class="type-body">Every size is a multiple of 3px. Two weights: Medium for body copy and labels, Heavy for titles.</p>
+        </div>
+        <div class="type-specimen type-specimen--scale">
+          <div class="type-row">
+            <p class="type-row__meta"><strong>Display</strong>Heavy &middot; 48px (36px on mobile)<code>--text-display</code></p>
+            <p class="type-row__sample type-display">Scaling your impact</p>
+          </div>
+          <div class="type-row">
+            <p class="type-row__meta"><strong>Title</strong>Heavy &middot; 21px<code>--text-title</code></p>
+            <p class="type-row__sample type-title">Avenir Heavy 21px is a title</p>
+          </div>
+          <div class="type-row">
+            <p class="type-row__meta"><strong>Body</strong>Medium &middot; 18px<code>--text-body</code></p>
+            <p class="type-row__sample type-body">Avenir Medium 18px is the body copy</p>
+          </div>
+          <div class="type-row">
+            <p class="type-row__meta"><strong>Secondary</strong>Medium &middot; 15px<code>--text-secondary</code></p>
+            <p class="type-row__sample type-secondary">Avenir Medium 15px is the secondary text</p>
+          </div>
+          <div class="type-row">
+            <p class="type-row__meta"><strong>Small</strong>Medium &middot; 12px<code>--text-small</code></p>
+            <p class="type-row__sample type-small">Avenir Medium 12px is the small text</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Components -->
+    <section class="section ds-section">
+      <div class="container">
+        <h2 class="section-label">Components</h2>
+        <div class="component-grid">
+          <div class="component">
+            <p class="component__name">Tag</p>
+            <div class="component__demo">
+              <span class="tag">Product Design Lead</span>
+              <span class="tag">HealthTech</span>
+            </div>
+          </div>
+          <div class="component">
+            <p class="component__name">Button &middot; outline</p>
+            <div class="component__demo">
+              <a href="#" class="btn btn--outline">Resume &#8599;</a>
+            </div>
+          </div>
+          <div class="component">
+            <p class="component__name">Text link</p>
+            <div class="component__demo">
+              <a href="#" class="project-card__link">carepatron.com &#8599;</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="component component--wide">
+          <p class="component__name">Project card</p>
+          <div class="project-card project-card--large">
+            <div class="project-card__info">
+              <div class="project-card__tags">
+                <span class="tag">Role</span>
+                <span class="tag">Industry</span>
+              </div>
+              <p class="project-card__brand">brand</p>
+              <h3 class="project-card__title">Project title describing the outcome</h3>
+              <p class="project-card__desc">A one-to-two sentence summary of the problem, the work, and the impact.</p>
+              <a href="#" class="project-card__link">link &#8599;</a>
+            </div>
+            <div class="project-card__image project-card__image--kami"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <p class="footer-tagline">~ Scaling your impact with design ~</p>
+      <nav class="footer-links" aria-label="Footer">
+        <a href="design-system.html" aria-current="page">Design System</a>
+        <a href="about.html">About</a>
+        <a href="index.html#work">Work</a>
+      </nav>
+    </div>
+  </footer>
+
+</body>
+</html>
