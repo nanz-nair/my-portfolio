@@ -1,0 +1,169 @@
+/* ==========================================================================
+   Tokens: the only file with raw values (colours, font names, sizes).
+   Everything else uses var(--…). Need a new value? Add a token here first.
+
+   Load order on every page: tokens.css, base.css, layout.css, components.css
+
+   Breakpoints (custom properties don't work inside media queries, so these
+   are written literally in components.css; keep them in sync):
+     --bp-md: 768px   tablet and below: single-column cards, smaller display type
+     --bp-sm: 480px   phone: shorter nav, stacked hero meta
+   ========================================================================== */
+
+/* Fonts: Avenir ships with macOS and iOS. Each face is pinned by name because
+   asking for Avenir by weight alone returns the wrong faces (800 misses Heavy). */
+@font-face { font-family: 'Avenir Local'; src: local('Avenir-Medium'), local('Avenir Medium'); font-weight: 500; }
+@font-face { font-family: 'Avenir Local'; src: local('Avenir-Heavy'), local('Avenir Heavy'); font-weight: 800; }
+
+:root {
+  /* ---- Palette (raw values) ---- */
+  --orange: #e53a04;
+  --mahogany: #561305;
+  --forest: #1f3300;
+  --olive: #676f0f;
+  --black: #261302;
+  --neutral: #f3e9d9;
+
+  /* Mixed from the palette for interface surfaces */
+  --cream-50: #faf6f0;       /* neutral 40% on white: light page and cards */
+  --cream-200: #dacfbf;      /* black 12% on neutral: light border */
+  --cream-300: #cec2b2;      /* black 18% on neutral: light dot grid */
+  --brown-800: #574636;      /* neutral 24% on black: dark dot grid */
+  --brown-850: #4b3a29;      /* neutral 18% on black: dark border */
+  --brown-900: #32200f;      /* neutral 6% on black: dark cards */
+  --shadow-brown: rgba(38, 19, 2, 0.08);
+  --shadow-black: rgba(0, 0, 0, 0.35);
+
+  /* ---- Colour roles that don't change with the theme ---- */
+  --color-accent: var(--orange);           /* frame, footer, link-hover highlight; never text */
+  --color-on-accent: var(--neutral);       /* text on Orange: 3.5:1 */
+  --color-inverse: var(--black);           /* footer link hover highlight */
+  --color-on-inverse: var(--neutral);
+
+  /* Project image fills (placeholders until real images) */
+  --fill-carepatron: linear-gradient(135deg, var(--orange), var(--mahogany));
+  --fill-kami: linear-gradient(135deg, var(--forest), var(--olive));
+  --fill-laurel: linear-gradient(135deg, var(--mahogany), var(--black));
+  --fill-cogo: linear-gradient(135deg, var(--olive), var(--forest));
+  --fill-lifekit: linear-gradient(135deg, var(--mahogany), var(--orange));
+  --fill-kumu: linear-gradient(135deg, var(--black), var(--forest));
+  --fill-highlight: linear-gradient(90deg, var(--orange), var(--olive), var(--orange));
+  --fill-highlight-size: 200% 100%;
+
+  /* Cursors: coloured dots */
+  --cursor-default: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"><circle cx="10" cy="10" r="8" fill="%23e53a04"/></svg>') 10 10, auto;
+  --cursor-pointer: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"><circle cx="10" cy="10" r="8" fill="%23676f0f"/></svg>') 10 10, pointer;
+  --cursor-active: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"><circle cx="10" cy="10" r="8" fill="%23561305"/></svg>') 10 10, pointer;
+
+  /* ---- Typography ---- */
+  --font-display: 'Avenir Local', 'Avenir', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  --font-body: 'Avenir Local', 'Avenir', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, monospace;
+  --weight-medium: 500;
+  --weight-heavy: 800;
+
+  /* Type scale: multiples of 3px */
+  --text-small: 0.75rem;       /* 12px  Medium: small text */
+  --text-secondary: 0.9375rem; /* 15px  Medium: secondary */
+  --text-body: 1.125rem;       /* 18px  Medium: body copy */
+  --text-title: 1.3125rem;     /* 21px  Heavy: title */
+  --text-display-sm: 2.25rem;  /* 36px  Heavy: display on tablet and below */
+  --text-display: 3rem;        /* 48px  Heavy: hero and page titles */
+
+  --leading-tight: 1.1;
+  --leading-snug: 1.3;
+  --leading-normal: 1.6;
+  --leading-relaxed: 1.7;
+  --leading-loose: 1.8;
+  --tracking-tight: -0.02em;
+
+  /* ---- Spacing (named by pixel value) ---- */
+  --space-2: 2px;
+  --space-4: 4px;
+  --space-6: 6px;
+  --space-8: 8px;
+  --space-10: 10px;
+  --space-12: 12px;
+  --space-14: 14px;
+  --space-16: 16px;
+  --space-20: 20px;
+  --space-24: 24px;
+  --space-28: 28px;
+  --space-32: 32px;
+  --space-40: 40px;
+  --space-48: 48px;
+  --space-60: 60px;
+  --space-64: 64px;
+  --space-80: 80px;
+  --space-100: 100px;
+
+  /* ---- Radius ---- */
+  --radius-xs: 4px;       /* link highlight */
+  --radius-sm: 6px;       /* token chips */
+  --radius-lg: 16px;      /* cards, panels, photo */
+  --radius-pill: 100px;   /* tags, buttons, name pill */
+  --radius-round: 50%;    /* avatar, theme toggle */
+
+  /* ---- Borders, lines, motion offsets ---- */
+  --border-strong: 1.5px;       /* outline button */
+  --underline-offset: 3px;
+  --link-bleed: 3px;            /* link highlight extends this far past the text */
+  --lift: 2px;                  /* card hover rise */
+
+  /* ---- Frame ---- */
+  --frame: 6px;
+  --frame-radius: 24px;         /* inner corners only */
+
+  /* ---- Sizes ---- */
+  --content-width: 1080px;
+  --measure: 560px;             /* hero subtitle, card descriptions */
+  --measure-wide: 640px;        /* About bio */
+  --measure-lede: 720px;        /* style guide intro */
+  --nav-height: 64px;
+  --nav-height-sm: 56px;
+  --dot-spacing: 24px;
+  --avatar: 40px;
+  --toggle: 36px;
+  --icon: 18px;
+  --chip: 24px;                 /* style guide token chip */
+  --swatch: 96px;               /* style guide swatch height */
+  --swatch-min: 140px;          /* style guide swatch column */
+  --type-label: 200px;          /* style guide type-scale label column */
+  --about-image: 280px;
+  --about-image-max: 320px;
+  --card-info: 45%;             /* large card text column */
+  --card-image-min: 200px;
+  --card-image-min-lg: 320px;
+  --card-image-min-sm: 140px;
+
+  /* ---- Layers ---- */
+  --z-nav: 100;
+  --z-frame: 1000;
+}
+
+/* ---- Themed colour roles ----
+   theme.js sets data-theme on <html>. Any element can also carry data-theme to
+   show the other theme locally (the style guide previews do this), so every
+   token that depends on a themed value is defined here, not on :root alone. */
+:root,
+[data-theme="light"] {
+  --color-bg: var(--cream-50);
+  --color-surface: var(--cream-50);
+  --color-text: var(--black);
+  --color-tag: var(--neutral);
+  --color-border: var(--cream-200);
+  --color-dot: var(--cream-300);
+  --shadow-sm: 0 4px 16px var(--shadow-brown);
+  --shadow-md: 0 8px 32px var(--shadow-brown);
+}
+
+[data-theme="dark"] {
+  --color-bg: var(--black);
+  --color-surface: var(--brown-900);
+  --color-text: var(--neutral);
+  --color-tag: var(--black);
+  --color-border: var(--brown-850);
+  --color-dot: var(--brown-800);
+  --shadow-sm: 0 4px 16px var(--shadow-black);
+  --shadow-md: 0 8px 32px var(--shadow-black);
+}

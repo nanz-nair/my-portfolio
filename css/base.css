@@ -1,0 +1,63 @@
+/* ==========================================================================
+   Base: reset and element defaults. Values come from tokens.css.
+   ========================================================================== */
+
+/* ---- Reset ---- */
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+/* ---- Theme: lets the browser draw scrollbars and form controls to match ---- */
+:root,
+[data-theme="light"] { color-scheme: light; }
+[data-theme="dark"] { color-scheme: dark; }
+
+/* ---- Document ---- */
+html {
+  scroll-behavior: smooth;
+  cursor: var(--cursor-default);
+}
+
+a, button, .btn, .project-card, .nav-logo {
+  cursor: var(--cursor-pointer);
+}
+
+a:active, button:active, .btn:active, .project-card:active, .nav-logo:active {
+  cursor: var(--cursor-active);
+}
+
+body {
+  font-family: var(--font-body);
+  font-size: var(--text-body);
+  font-weight: var(--weight-medium);
+  background: var(--color-bg);
+  background-image: radial-gradient(circle, var(--color-dot) 1px, transparent 1px);
+  background-size: var(--dot-spacing) var(--dot-spacing);
+  color: var(--color-text);
+  line-height: var(--leading-normal);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ---- Links ----
+   Every text link: underlined in the text colour, highlighted Orange on hover.
+   .nav-logo and .btn are links styled as components, so they opt out. */
+a {
+  color: var(--color-text);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: var(--underline-offset);
+}
+
+a:not(.nav-logo, .btn) {
+  padding: 0 var(--link-bleed);
+  margin: 0 calc(-1 * var(--link-bleed));  /* highlight bleeds past the text without shifting layout */
+  border-radius: var(--radius-xs);
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;  /* each line of a wrapped link gets its own block */
+  transition: background-color 0.15s, color 0.15s, text-decoration-color 0.15s;
+}
+
+a:not(.nav-logo, .btn):hover,
+a:not(.nav-logo, .btn):focus-visible {
+  background-color: var(--color-accent);
+  color: var(--color-on-accent);
+  text-decoration-color: transparent;
+}

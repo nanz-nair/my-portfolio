@@ -1,0 +1,16 @@
+/* ==========================================================================
+   Layout: page shell and layout helpers. Values come from tokens.css.
+   ========================================================================== */
+
+/* Page shell: a column that pushes the footer to the bottom on short pages */
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Centred content column with side gutters */
+.container { max-width: var(--content-width); margin: 0 auto; padding: 0 var(--space-24); }
+
+/* Vertical rhythm for page sections */
+.section { padding: var(--space-64) 0; }
