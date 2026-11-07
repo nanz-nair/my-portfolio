@@ -501,6 +501,7 @@ body::after {
 /* ===== Responsive =====
    Breakpoints are listed in tokens.css; keep these literals in sync. */
 @media (max-width: 768px) {
+  .container, .nav-inner { padding: 0 var(--gutter-sm); }
   .hero { padding: var(--space-64) 0 var(--space-48); }
   .page-title, .type-display { font-size: var(--text-display-sm); }
   .type-row { grid-template-columns: 1fr; gap: var(--space-8); }
