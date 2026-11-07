@@ -34,7 +34,7 @@
 
   /* ---- Colour roles that don't change with the theme ---- */
   --color-accent: var(--orange);           /* frame, footer, link-hover highlight; never text */
-  --color-frame-glow: var(--olive);        /* frame gradient colour nearest the cursor */
+  --color-frame-glow: var(--neutral);        /* frame gradient colour nearest the cursor */
   --color-on-accent: var(--neutral);       /* text on Orange: 3.5:1 */
   --color-inverse: var(--black);           /* footer link hover highlight */
   --color-on-inverse: var(--neutral);
