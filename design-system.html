@@ -135,34 +135,137 @@
       </div>
     </section>
 
+    <!-- Spacing -->
+    <section class="section ds-section">
+      <div class="container">
+        <h2 class="section-label">Spacing</h2>
+        <p class="type-body ds-lede">Spacing tokens are named by their pixel value, so near-duplicates are easy to spot.</p>
+        <div class="type-specimen space-list">
+          <div class="space-row"><code>--space-2 &middot; 2px</code><span class="space-bar space-bar--2"></span></div>
+          <div class="space-row"><code>--space-4 &middot; 4px</code><span class="space-bar space-bar--4"></span></div>
+          <div class="space-row"><code>--space-6 &middot; 6px</code><span class="space-bar space-bar--6"></span></div>
+          <div class="space-row"><code>--space-8 &middot; 8px</code><span class="space-bar space-bar--8"></span></div>
+          <div class="space-row"><code>--space-10 &middot; 10px</code><span class="space-bar space-bar--10"></span></div>
+          <div class="space-row"><code>--space-12 &middot; 12px</code><span class="space-bar space-bar--12"></span></div>
+          <div class="space-row"><code>--space-14 &middot; 14px</code><span class="space-bar space-bar--14"></span></div>
+          <div class="space-row"><code>--space-16 &middot; 16px</code><span class="space-bar space-bar--16"></span></div>
+          <div class="space-row"><code>--space-20 &middot; 20px</code><span class="space-bar space-bar--20"></span></div>
+          <div class="space-row"><code>--space-24 &middot; 24px</code><span class="space-bar space-bar--24"></span></div>
+          <div class="space-row"><code>--space-28 &middot; 28px</code><span class="space-bar space-bar--28"></span></div>
+          <div class="space-row"><code>--space-32 &middot; 32px</code><span class="space-bar space-bar--32"></span></div>
+          <div class="space-row"><code>--space-40 &middot; 40px</code><span class="space-bar space-bar--40"></span></div>
+          <div class="space-row"><code>--space-48 &middot; 48px</code><span class="space-bar space-bar--48"></span></div>
+          <div class="space-row"><code>--space-60 &middot; 60px</code><span class="space-bar space-bar--60"></span></div>
+          <div class="space-row"><code>--space-64 &middot; 64px</code><span class="space-bar space-bar--64"></span></div>
+          <div class="space-row"><code>--space-80 &middot; 80px</code><span class="space-bar space-bar--80"></span></div>
+          <div class="space-row"><code>--space-100 &middot; 100px</code><span class="space-bar space-bar--100"></span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Radius -->
+    <section class="section ds-section">
+      <div class="container">
+        <h2 class="section-label">Radius</h2>
+        <div class="swatch-grid">
+          <div class="swatch"><div class="radius-demo radius-demo--xs"></div><p class="swatch__name">Xs</p><p class="swatch__role">Link highlight</p><code>--radius-xs &middot; 4px</code></div>
+          <div class="swatch"><div class="radius-demo radius-demo--sm"></div><p class="swatch__name">Sm</p><p class="swatch__role">Token chips</p><code>--radius-sm &middot; 6px</code></div>
+          <div class="swatch"><div class="radius-demo radius-demo--lg"></div><p class="swatch__name">Lg</p><p class="swatch__role">Cards, panels, photo</p><code>--radius-lg &middot; 16px</code></div>
+          <div class="swatch"><div class="radius-demo radius-demo--pill"></div><p class="swatch__name">Pill</p><p class="swatch__role">Tags, buttons, name pill</p><code>--radius-pill &middot; 100px</code></div>
+          <div class="swatch"><div class="radius-demo radius-demo--round"></div><p class="swatch__name">Round</p><p class="swatch__role">Avatar, theme toggle</p><code>--radius-round &middot; 50%</code></div>
+          <div class="swatch"><div class="radius-demo radius-demo--frame"></div><p class="swatch__name">Frame</p><p class="swatch__role">Frame inner corners</p><code>--frame-radius &middot; 24px</code></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Shadows -->
+    <section class="section ds-section">
+      <div class="container">
+        <h2 class="section-label">Shadows</h2>
+        <div class="swatch-grid">
+          <div class="swatch"><div class="shadow-demo shadow-demo--sm"></div><p class="swatch__name">Small</p><p class="swatch__role">Name pill on hover</p><code>--shadow-sm</code></div>
+          <div class="swatch"><div class="shadow-demo shadow-demo--md"></div><p class="swatch__name">Medium</p><p class="swatch__role">Project cards on hover</p><code>--shadow-md</code></div>
+        </div>
+      </div>
+    </section>
+
     <!-- Components -->
     <section class="section ds-section">
       <div class="container">
         <h2 class="section-label">Components</h2>
+        <p class="type-body ds-lede">Every component in <code>css/components.css</code>, with its variants. The hero, the About layout, the frame and the footer are shown live on their own pages.</p>
         <div class="component-grid">
           <div class="component">
-            <p class="component__name">Tag</p>
+            <p class="component__name">Section label &middot; <code>.section-label</code></p>
+            <div class="component__demo">
+              <p class="section-label ds-flush">Recent Works (2023 &ndash; 2026)</p>
+            </div>
+          </div>
+          <div class="component">
+            <p class="component__name">Tag &middot; <code>.tag</code></p>
             <div class="component__demo">
               <span class="tag">Product Design Lead</span>
               <span class="tag">HealthTech</span>
             </div>
           </div>
           <div class="component">
-            <p class="component__name">Button &middot; outline</p>
+            <p class="component__name">Button &middot; <code>.btn.btn--outline</code></p>
             <div class="component__demo">
               <a href="#" class="btn btn--outline">Resume &#8599;</a>
             </div>
           </div>
           <div class="component">
-            <p class="component__name">Text link</p>
+            <p class="component__name">Text link &middot; default (hover for the highlight)</p>
             <div class="component__demo">
               <a href="#" class="project-card__link">carepatron.com &#8599;</a>
+            </div>
+          </div>
+          <div class="component ds-accent-panel">
+            <p class="component__name">Text link &middot; on the accent (footer)</p>
+            <div class="component__demo">
+              <div class="footer-links ds-flush">
+                <a href="#">Design System</a>
+                <a href="#">About</a>
+              </div>
+            </div>
+          </div>
+          <div class="component">
+            <p class="component__name">Name pill &middot; <code>.nav-logo</code> (hover for the full name)</p>
+            <div class="component__demo">
+              <a href="#" class="nav-logo">
+                <img src="images/nanz-photo.png" alt="" class="nav-avatar">
+                <span class="nav-logo-text">
+                  <span class="nav-logo-name" data-hover="Nandini Nair">Nanz Nair</span>
+                  <span class="nav-logo-role">Product Designer</span>
+                </span>
+              </a>
+            </div>
+          </div>
+          <div class="component">
+            <p class="component__name">Nav links &middot; <code>.nav-links</code> (current page in Heavy)</p>
+            <div class="component__demo">
+              <div class="nav-links">
+                <a href="#">Work</a>
+                <a href="#">About</a>
+              </div>
+            </div>
+          </div>
+          <div class="component">
+            <p class="component__name">Theme toggle &middot; <code>.theme-toggle</code> (moon in light, sun in dark)</p>
+            <div class="component__demo">
+              <span class="theme-toggle" aria-hidden="true"><svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5Z"/></svg><svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg></span>
+            </div>
+          </div>
+          <div class="component">
+            <p class="component__name">Page title &middot; <code>.page-title</code></p>
+            <div class="component__demo">
+              <p class="page-title ds-flush">About</p>
             </div>
           </div>
         </div>
 
         <div class="component component--wide">
-          <p class="component__name">Project card</p>
+          <p class="component__name">Project card &middot; <code>.project-card--large</code></p>
           <div class="project-card project-card--large">
             <div class="project-card__info">
               <div class="project-card__tags">
@@ -175,6 +278,32 @@
               <a href="#" class="project-card__link">link &#8599;</a>
             </div>
             <div class="project-card__image project-card__image--kami"></div>
+          </div>
+        </div>
+
+        <div class="component component--wide ds-stack">
+          <p class="component__name">Project card &middot; <code>.project-card--small</code> in <code>.project-grid</code></p>
+          <div class="project-grid">
+            <div class="project-card project-card--small">
+              <div class="project-card__info">
+                <p class="project-card__desc">One sentence about the project and its outcome.</p>
+                <span class="tag">Role</span>
+                <a href="#" class="project-card__link">Link &#8599;</a>
+              </div>
+              <div class="project-card__image project-card__image--cogo"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="component component--wide ds-stack">
+          <p class="component__name">Project image fills &middot; <code>.project-card__image--*</code></p>
+          <div class="swatch-grid">
+            <div class="swatch"><div class="fill-chip project-card__image project-card__image--carepatron"></div><code>--carepatron</code></div>
+            <div class="swatch"><div class="fill-chip project-card__image project-card__image--kami"></div><code>--kami</code></div>
+            <div class="swatch"><div class="fill-chip project-card__image project-card__image--laurel"></div><code>--laurel</code></div>
+            <div class="swatch"><div class="fill-chip project-card__image project-card__image--cogo"></div><code>--cogo</code></div>
+            <div class="swatch"><div class="fill-chip project-card__image project-card__image--lifekit"></div><code>--lifekit</code></div>
+            <div class="swatch"><div class="fill-chip project-card__image project-card__image--kumu"></div><code>--kumu</code></div>
           </div>
         </div>
       </div>

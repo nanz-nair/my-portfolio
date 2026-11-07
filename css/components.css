@@ -431,6 +431,45 @@ body::after {
 .component__demo { display: flex; flex-wrap: wrap; align-items: center; gap: var(--space-8); }
 .component--wide .project-card { margin-bottom: 0; }
 
+/* Style guide demos: spacing bars, radius and shadow samples, image fills */
+.ds-flush { margin: 0; }
+.ds-stack { margin-top: var(--space-24); }
+.ds-accent-panel { background: var(--color-accent); border-color: var(--color-accent); color: var(--color-on-accent); }
+.ds-accent-panel .component__name { color: var(--color-on-accent); }
+.ds-accent-panel code { color: var(--color-on-accent); }
+.space-list { display: grid; gap: var(--space-4); }
+.space-row { display: grid; grid-template-columns: var(--type-label) 1fr; gap: var(--space-24); align-items: center; }
+.space-bar { display: block; height: var(--space-12); background: var(--color-accent); border-radius: var(--radius-xs); }
+.space-bar--2 { width: var(--space-2); }
+.space-bar--4 { width: var(--space-4); }
+.space-bar--6 { width: var(--space-6); }
+.space-bar--8 { width: var(--space-8); }
+.space-bar--10 { width: var(--space-10); }
+.space-bar--12 { width: var(--space-12); }
+.space-bar--14 { width: var(--space-14); }
+.space-bar--16 { width: var(--space-16); }
+.space-bar--20 { width: var(--space-20); }
+.space-bar--24 { width: var(--space-24); }
+.space-bar--28 { width: var(--space-28); }
+.space-bar--32 { width: var(--space-32); }
+.space-bar--40 { width: var(--space-40); }
+.space-bar--48 { width: var(--space-48); }
+.space-bar--60 { width: var(--space-60); }
+.space-bar--64 { width: var(--space-64); }
+.space-bar--80 { width: var(--space-80); }
+.space-bar--100 { width: var(--space-100); }
+.radius-demo { height: var(--swatch); background: var(--color-surface); border: 1px solid var(--color-text); margin-bottom: var(--space-12); }
+.radius-demo--xs { border-radius: var(--radius-xs); }
+.radius-demo--sm { border-radius: var(--radius-sm); }
+.radius-demo--lg { border-radius: var(--radius-lg); }
+.radius-demo--pill { border-radius: var(--radius-pill); }
+.radius-demo--round { border-radius: var(--radius-round); width: var(--swatch); }
+.radius-demo--frame { border-radius: var(--frame-radius); }
+.shadow-demo { height: var(--swatch); background: var(--color-surface); border-radius: var(--radius-lg); margin-bottom: var(--space-12); }
+.shadow-demo--sm { box-shadow: var(--shadow-sm); }
+.shadow-demo--md { box-shadow: var(--shadow-md); }
+.fill-chip { min-height: 0; height: var(--swatch); border-radius: var(--radius-lg); margin-bottom: var(--space-12); }
+
 /* ===== Responsive =====
    Breakpoints are listed in tokens.css; keep these literals in sync. */
 @media (max-width: 768px) {
